@@ -1,28 +1,27 @@
-import { Format } from "./format.js"
+import { registerActions } from "./registerActions.js";
 
-const format = Format
 export class Router {
-  routes = {}
+  routes = {};
 
   add(routeName, page) {
-    this.routes[routeName] = page
+    this.routes[routeName] = page;
   }
 
   route(event) {
-    event = event || window.event
-    event.preventDefault()
+    event = event || window.event;
+    event.preventDefault();
 
-    window.history.pushState({}, "", event.target.href)
+    window.history.pushState({}, "", event.target.href);
 
-    this.handle()
+    this.handle();
   }
 
   handle() {
-    const { pathname } = window.location
-    const route = this.routes[pathname]
+    const currentPage = window.location.pathname;
+    const route = this.routes[currentPage];
     fetch(route)
       .then((data) => data.text())
-      .then((html) => (document.querySelector("#app").innerHTML = html))
-    format()
+      .then((html) => (document.querySelector("#app").innerHTML = html));
+    registerActions();
   }
 }
