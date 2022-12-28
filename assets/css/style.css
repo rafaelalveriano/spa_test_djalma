@@ -10,8 +10,7 @@
 
 body {
   height: 100vh;
-  background: url(../img/home-bg.svg) center no-repeat;
-  background-size: cover;
+
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   color: #e1e1e6;
@@ -55,7 +54,18 @@ a {
   color: #ffffff;
 }
 
+.home-bg {
+  background: url(../img/home-bg.svg) center no-repeat;
+}
+.universe-bg {
+  background: url(../img/universe-bg.svg) center no-repeat;
+}
+.exploration-bg {
+  background: url(../img/exploration-bg.svg) center no-repeat;
+}
+
 .main-content {
+  background-size: cover;
   height: 100%;
   display: flex;
   gap: 2.4rem;
@@ -87,4 +97,25 @@ a {
 .main-content button:hover {
   background: #ffffff;
   color: #02799d;
+}
+
+.main-text {
+  padding-left: 10.2rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.main-text h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 125%;
+  color: #e1e1e6;
+}
+
+.main-text p {
+  width: 648px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
 }

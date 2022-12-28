@@ -21,16 +21,24 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/" class="open-page">Home</a></li>
-          <li><a href="./pages/universe.html">O Universo</a></li>
-          <li><a href="./pages/exploration.html">Exploração</a></li>
+          <li><a href="/" onclick="route()" class="home-link">Home</a></li>
+          <li>
+            <a href="/universe.html" onclick="route()" class="universe-link"
+              >O Universo</a
+            >
+          </li>
+          <li>
+            <a
+              href="/exploration.html"
+              onclick="route()"
+              class="exploration-link"
+              >Exploração</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
-    <main class="main-content">
-      <h1>Explore o universo</h1>
-      <button>Quero saber mais</button>
-    </main>
+    <main id="app" class="main-content"></main>
     <script src="./assets/js/main.js" type="module"></script>
   </body>
 </html>
